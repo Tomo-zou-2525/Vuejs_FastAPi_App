@@ -11,4 +11,10 @@ service:
     build:
       context: .
       dockerfile: ./docker/node/Dockerfile
-      
+
+    ports:
+      - 3000:3000
+    volumes:
+      - ./app/node/:/app
+
+    tty: true
